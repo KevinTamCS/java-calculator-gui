@@ -16,12 +16,13 @@ class CalculatorUI {
         // Create a new JFrame
         JFrame frame = new JFrame();
         frame.setTitle("Java Calculator");
-        frame.setSize(350, 450);
+        frame.setSize(300, 450);
+        frame.setResizable(false);
         frame.setLayout(null);
 
         // Calculator display
         JTextField calculatorDisplay = new JTextField("0", 20);
-        calculatorDisplay.setBounds(25, 25, 300, 50);
+        calculatorDisplay.setBounds(25, 25, 250, 50);
         calculatorDisplay.setFont(new Font("Arial", Font.PLAIN, 24));
         calculatorDisplay.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         frame.add(calculatorDisplay);
@@ -33,15 +34,15 @@ class CalculatorUI {
                  "4", "5", "6",
                  "1", "2", "3",
                  "0", ".", "="};
-        generateButtons(frame, buttonValues, 60, 100,60, 3);
+        generateButtons(frame, buttonValues, 35, 100,60, 3);
 
         // Top 3 buttons of fourth column
         buttonValues = new String[] {"/", "*", "-"};
-        generateButtons(frame, buttonValues, 240, 100, 60, 1);
+        generateButtons(frame, buttonValues, 215, 100, 60, 1);
 
         // Plus button
         JButton button = new JButton("+");
-        button.setBounds(240, 280, 50, 110);
+        button.setBounds(215, 280, 50, 110);
         frame.add(button);
 
         // Render the calculator after all elements are finished drawing
